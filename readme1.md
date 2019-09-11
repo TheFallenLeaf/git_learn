@@ -31,3 +31,11 @@ git版本库里面存放了很多东西,其中最重要的是就是暂存区(sta
 将暂存区文件恢复到工作区,再执行命令:
 	git checkout -- <file>
 将工作区文件恢复到版本库的状态
+# 删除文件操作
+## 从版本库中删除某个文件
+使用命令:
+	git rm <file>
+删除后再次提交生效
+	git commit -m "remove <file>"
+## 工作区文件被误删以后如何恢复
+	git checkout -- <file>

@@ -1,0 +1,20 @@
+# git工作区与暂存区
+## 工作区
+工作区(working space)就是用户当前自己的目录
+## 版本库
+版本库(repository)是工作区的一个隐藏目录(.git)
+
+git版本库里面存放了很多东西,其中最重要的是就是暂存区(stage)
+还有git为我创建的一个master分支,以及指向master分支的指针head
+
+当我们把文件添加到版本库时,是分两步执行
+*第一步将文件添加进去,使用命令
+	git add <file>
+*第二步提交更改,使用命令
+	git commit -m "commit message"
+第一步实际上是将工作区文件添加到暂存区,第二步是将暂存区所有内容提交到分支
+## git diff 和 git diff --cached 的区别
+*git diff 比较的是工作区与缓存区的区别
+*git diff --cached 比较的是缓存区与分支的区别
+*缓存区保留上次commit的内容
+*git diff -HEAD 比较工作区与分支的区别
